@@ -1,0 +1,71 @@
+body {
+  margin: 20px;
+}
+code {
+  font-family: monospace;
+}
+
+/* Selector universal */
+* {
+  font-family: sans-serif;
+  color: #232323;
+}
+/* Selector de etiqueta */
+h5 {
+  color: brown;
+  font-size: 20px;
+}
+/* Selectores de ID */
+#parrafo {
+  color: darkcyan;
+  font-size: 15px;
+}
+/* Selector de clase */
+.parrafo {
+  color: coral;
+  font-size: 10px;
+}
+/* Selectores de atributo */
+a[title] {
+  background-color: aquamarine;
+}
+[href="https://www.google.es"] {
+  background-color: darkgreen;
+}
+[href^="#"] {
+  background-color: gold;
+}
+[href$=".org"] {
+  background-color: firebrick;
+}
+[href*="logo"] {
+  background-color: deeppink;
+}
+[name~="logo"] {
+  background-color: burlywood;
+}
+/* COMBINADORES */
+/* Combinadores de hermanos adyacentes */
+div + p{
+  color: cadetblue;
+  font-size: 20px;
+}
+/* Selector de hermanos generales */
+p ~ span {
+  color: greenyellow;
+  font-size: 20px;
+}
+/* Combinadores de hijos */
+p > span {
+  color: crimson;
+  font-size: 20px;
+}
+/* Combinador de descendientes */
+.padre span {
+  color: darkorange;
+  font-size: 15px;
+}
+
+input:invalid {
+  background-color: blueviolet;
+}

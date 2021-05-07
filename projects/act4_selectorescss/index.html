@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Selectores CSS</title>
+  </head>
+  <body>
+    <h1>Selectores CSS</h1>
+    <hr />
+    <h3>Selector universal</h3>
+    <code>* { font-family: sans-serif; color: #232323; }</code>
+    <p>Aplica a todo el documento</p>
+    <h3>Selectores de tipo</h3>
+    <code>h5 { color: brown; font-size: 20px; }</code>
+    <h5>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, illum
+      esse? Delectus aperiam incidunt odio facilis magni porro mollitia optio
+      recusandae animi doloremque. Suscipit ea rerum, aliquam totam at corporis.
+    </h5>
+    <h3>Selectores de ID</h3>
+    <code>#parrafo { color: darkcyan; font-size: 15px; }</code><br />
+    <code>p#parrafo { color: darkcyan; font-size: 15px; }</code>
+    <p id="parrafo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, sequi
+      dicta vel libero veritatis, laborum facilis assumenda odio distinctio est
+      nihil velit non, consectetur quidem quia aperiam fugiat officia! Eaque?
+    </p>
+    <p>Párrafo sin estilo</p>
+    <h3>Selector de clase</h3>
+    <code>.parrafo { color: coral; font-size: 10px; }</code><br />
+    <code>p.parrafo { color: coral; font-size: 10px; }</code>
+    <p class="parrafo">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum aut quaerat
+      nemo sint asperiores molestias placeat est cumque. Est omnis sapiente
+      dicta autem consectetur, nisi reiciendis eius ut ad? Porro.
+    </p>
+    <p>Párrafo sin estilo</p>
+    <h3>Selectores de atributo</h3>
+    <p>/* a elements with a title attribute */</p>
+    <code>a[title] { background-color: aquamarine; }</code><br />
+    <a href="#" title="link">Link con titulo</a><br />
+    <p>/* a elements with an href matching "https://www.google.es" */</p>
+    <code
+      >[href="https://www.google.es"] { background-color: darkgreen; font-size:
+      20px; }</code
+    ><br />
+    <a href="https://www.google.es">Google</a><br />
+    <p>/* Internal links, beginning with "#" */</p>
+    <code>a[href^="#"] { background-color: gold; }</code><br />
+    <a href="#home">Home</a><br />
+    <p>/* a elements with an href ending ".org" */</p>
+    <code>[href$=".org"] { background-color: firebrick; }</code><br />
+    <a href="https://code.org">code.org</a>
+    <p>/* a elements with an href containing "logo" */</p>
+    <code>[href*="logo"] { background-color: deeppink; }</code><br />
+    <a href="https://logo.com">Link con la palabra logo</a>
+    <p>/* a elements whose class attribute contains the word "logo" */</p>
+    <code>[name~="logo"] { background-color: burlywood; }</code><br />
+    <a name="esto es un logo">Link con "logo" en el nombre</a>
+    <h2>Combinadores</h2>
+    <h3>Combinadores de hermanos adyacentes</h3>
+    <div>
+      <code>div + p{ color: cadetblue; font-size: 20px; }</code>
+      <div>
+        El combinador + selecciona hermanos adyacentes. Esto quiere decir que el
+        segundo elemento sigue directamente al primero y ambos comparten el
+        mismo elemento padre. Esto es un div.
+      </div>
+      <p>
+        In laborum quas inventore maiores dolor iure tenetur facilis aliquam.
+        Accusantium, ab! Voluptatibus officiis officia veniam.
+      </p>
+      <p>
+        Párrafo que como no sigue directamente al primer div, se queda sin
+        estilo
+      </p>
+    </div>
+    <h3>Selector de hermanos generales</h3>
+    <code>p ~ span { color: greenyellow; font-size: 20px; }</code>
+    <p>
+      El combinador ~ selecciona hermanos. Esto quiere decir que el segundo
+      elemento sigue al primero (no necesariamente de forma inmediata) y ambos
+      comparten el mismo elemento padre. Esto es un párrafo.
+    </p>
+    <div>Esto es un div con texto</div>
+    <span>Esto es un span dentro del mismo padre que el primer párrafo</span>
+    <div>Otro div con texto</div>
+    <span>Otro span</span>
+    <h3>Combinadores de hijos</h3>
+    <code>p > span { color: crimson; font-size: 20px; }</code><br />
+    <p>
+      El combinador > selecciona los elementos que son hijos directos del primer
+      elemento. <span>Esto es un span hijo directo de un párrafo</span>
+    </p>
+    <h3>Combinador de descendientes</h3>
+    <code>.padre span { color: darkorange; font-size: 15px; }</code><br />
+    <div class="padre">
+      <p>
+        El combinador (espacio) selecciona los elementos que son descendientes
+        del primer elemento.
+        <span
+          >Este span es hijo de un párrafo y nieto de la classe "padre".</span
+        >
+      </p>
+    </div>
+    <pre>Hola que tal</pre>
+  </body>
+</html>
