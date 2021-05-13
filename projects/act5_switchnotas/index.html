@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-family: sans-serif;
+        margin: 0.3em;
+      }
+      input {
+        width: 30vw;
+        display: inline-block;
+        padding: 0.3em;
+      }
+    </style>
+    <title>Nota</title>
+  </head>
+  <body>
+    <h2>Nota media</h2>
+    <hr />
+    <p>Introduce tus notas del trimestre</p>
+    <input
+      type="number"
+      min="0"
+      max="10"
+      class="insert"
+      placeholder="Matemáticas"
+    />
+    <br />
+    <input
+      type="number"
+      min="0"
+      max="10"
+      class="insert"
+      placeholder="Historia"
+    /><br />
+    <input
+      type="number"
+      min="0"
+      max="10"
+      class="insert"
+      placeholder="Geografía"
+    /><br />
+    <input
+      type="number"
+      min="0"
+      max="10"
+      class="insert"
+      placeholder="Literatura"
+    /><br />
+    <button onclick="enviarNotaMedia()">Enviar</button>
+    <div>Esta es tu nota media: <span id="notamedia"></span></div>
+
+    <strong>Tu resultado final es: <span id="resultado"></span></strong>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

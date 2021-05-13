@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+}
+
+.acordeon {
+  margin: 30px auto;
+  padding: 2em;
+  width: 90%;
+  max-width: 120em;
+
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.acordeon .bloque {
+  margin: 0 0 1em 0;
+  padding: 1em;
+
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.acordeon .h2 {
+  cursor: pointer;
+  margin: 0 0 1em;
+  padding: 1em;
+
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+.acordeon .contenido {
+  height: 0;
+  padding: 0em;
+  overflow: hidden;
+  background-color: coral;
+  color: white;
+  transition: height 0.5s ease;
+
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
+  border-radius: 10px;
+}
+
+.acordeon .bloque.activo .contenido {
+  height: 4em;
+  padding: 1em;
+}
