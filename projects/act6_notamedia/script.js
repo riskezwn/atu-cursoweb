@@ -2,6 +2,38 @@
 
 const campo_nota = document.getElementById("notamedia");
 const campo_resultado = document.getElementById("resultado");
+// const calificacion_indiv = document.getElementByClassName("calif_indiv");
+
+// function calificacion(n) {
+//   calificacion_indiv.forEach((i) => {
+//     if (n <= 10 && n >= 0) {
+//       let nota_redondeada = Math.floor(n);
+//       let calif_nombre;
+//       switch (nota_redondeada) {
+//         case 10:
+//         case 9:
+//           calif_nombre = "Sobresaliente";
+//           break;
+//         case 8:
+//         case 7:
+//           calif_nombre = "Notable";
+//           break;
+//         case 6:
+//           calif_nombre = "Bien";
+//           break;
+//         case 5:
+//           calif_nombre = "Suficiente";
+//           break;
+//         default:
+//           calif_nombre = "Suspenso";
+//           break;
+//       }
+//       calificacion_indiv[i].innerHTML = calif_nombre;
+//     } else {
+//       alert("Introduce unas notas válidas");
+//     }
+//   });
+// }
 
 function enviarNotaMedia() {
   var inputs = document.getElementsByClassName("insert");
@@ -9,6 +41,7 @@ function enviarNotaMedia() {
   let listaNotas = [];
   for (var i = 0; i < inputs.length; i++) {
     listaNotas.push(inputs[i].value);
+
   }
 
   sumarArray(listaNotas);
@@ -39,6 +72,8 @@ function enviarNotaMedia() {
         }
       } else {
         alert("Introduce unas notas válidas");
+        campo_nota.innerHTML = "";
+        campo_resultado.innerHTML = "";
       }
     }
     campo_nota.innerHTML = nota_media;
