@@ -28,7 +28,8 @@
       max="10"
       class="insert"
       placeholder="Matemáticas"
-    />
+      onblur="calificacion()"
+    /><span class="calif_indiv"></span>
     <br />
     <input
       type="number"
@@ -36,25 +37,27 @@
       max="10"
       class="insert"
       placeholder="Historia"
-    /><br />
+      onblur="calificacion()"
+    /><span class="calif_indiv"></span> <br />
     <input
       type="number"
       min="0"
       max="10"
       class="insert"
       placeholder="Geografía"
-    /><br />
+      onblur="calificacion()"
+    /><span class="calif_indiv"></span><br />
     <input
       type="number"
       min="0"
       max="10"
       class="insert"
       placeholder="Literatura"
-    /><br />
+      onblur="calificacion()"
+    /><span class="calif_indiv"></span><br />
     <button onclick="enviarNotaMedia()">Enviar</button>
     <div>Esta es tu nota media: <span id="notamedia"></span></div>
 
     <strong>Tu resultado final es: <span id="resultado"></span></strong>
-
   </body>
 </html>
