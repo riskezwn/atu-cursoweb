@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>Comprobador DNI</title>
+  </head>
+  <body>
+    <header>
+      <i class="fas fa-id-card"></i>
+      <h1 class="h1">COMPROBACIÓN DNI</h1>
+    </header>
+
+    <main>
+      <input
+        class="dni"
+        id="dni"
+        type="text"
+        maxlength="9"
+        placeholder="12345678A"
+        onchange="reset()"
+        onkeyup="javascript:this.value=this.value.toUpperCase();"
+      />
+      <p class="msg"></p>
+      <button class="button" onclick="comprobarDni()">Comprobar</button>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/790908a15c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
