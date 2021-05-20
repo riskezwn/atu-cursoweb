@@ -46,9 +46,9 @@ main .dni {
   background: #ededed;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
-main .dni:focus {
+main .dni:focus, .dni:hover {
   outline: none;
-  box-shadow: 20px 20px 60px #999999, -20px -20px 60px #b8b8b8;
+  box-shadow: 20px 20px 60px #949494, -20px -20px 60px #ffffff;
 }
 main .dni::placeholder {
  color: #999999;
@@ -82,4 +82,7 @@ main .button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
+main .button:hover {
+  background-color: #4c579a;
 }

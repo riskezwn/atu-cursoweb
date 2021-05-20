@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const letras = [
   "T",
@@ -27,40 +27,38 @@ const letras = [
   "T",
 ];
 const regexNum = /(\d+)/g;
-const regexLetra = /[A-Za-z]+/g;
+const nifRegex = /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i;
 const inputDNI = document.querySelector(".dni");
 const msgDNI = document.querySelector(".msg");
 
 function comprobarDni() {
-  let dni = document.querySelector(".dni").value;
+  let dni = inputDNI.value;
+  let dniValido = nifRegex.test(dni);
 
-  if (dni != "") {
+  if (dniValido) {
     let numerosDNI = dni.match(regexNum);
+    let letraDNI = dni.charAt(dni.length - 1);
 
-    let letraIntroducida = dni.charAt(dni.length - 1);
-    let letraDNI = letraIntroducida.match(regexLetra);
-
-    if (numerosDNI >= 0 && numerosDNI <= 99999999 && letraDNI != null) {
-      let posicion = letras[numerosDNI % 23];
-      if (posicion == letraDNI) {
-        inputDNI.classList.remove("incorrecto");
-        inputDNI.classList.add("correcto");
-        msgDNI.innerHTML = "¡Enhorabuena! Tu DNI es correcto.";
-      } else {
-        inputDNI.classList.remove("correcto");
-        inputDNI.classList.add("incorrecto");
-        msgDNI.innerHTML = "Lo sentimos... Tu DNI es incorrecto.";
-      }
+    let posicion = letras[numerosDNI % 23];
+    if (posicion == letraDNI) {
+      inputDNI.classList.remove("incorrecto");
+      inputDNI.classList.add("correcto");
+      msgDNI.innerHTML = "¡Enhorabuena! Tu DNI es correcto.";
     } else {
-      alert("Introduce un DNI válido");
+      inputDNI.classList.remove("correcto");
+      inputDNI.classList.add("incorrecto");
+      msgDNI.innerHTML =
+        "Lo sentimos... Tu DNI es incorrecto. El DNI válido sería: " +
+        numerosDNI +
+        posicion;
     }
   } else {
-    alert("Introduce un DNI");
+    alert("Introduce un DNI válido");
   }
 }
 
 function reset() {
-  let dni = document.querySelector(".dni").value;
+  let dni = inputDNI.value;
   if (dni == "") {
     inputDNI.classList.remove("incorrecto");
     inputDNI.classList.remove("correcto");
