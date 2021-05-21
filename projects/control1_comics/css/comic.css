@@ -18,13 +18,13 @@ main {
   min-height: 900px;
   margin: 0;
   padding: 0;
-  /* background-color: #dfdfdf; */
+  background-color: #eeeeee;
 }
 
 main .container {
   margin: 0 auto;
   width: 60%;
-  padding: 1em;
+  padding: 2em;
 }
 main .container .ul {
   width: 100%;
@@ -34,10 +34,12 @@ main .container .ul {
   justify-content: flex-end;
 }
 main .container .li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: .75em;
   cursor: pointer;
-  padding: 1em 2em;
+  padding: 1.5em 2.5em;
   color: whitesmoke;
-  font-weight: 500;
   background-color: #ff6200;
 }
 main .container .li:hover,
@@ -61,7 +63,7 @@ main .subcontainer .tab {
   width: 100%;
   position: absolute;
   top: 0;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease;
 }
 main .subcontainer .tab.active {
   opacity: 100;

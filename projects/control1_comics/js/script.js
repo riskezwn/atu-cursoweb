@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function openComic() {
-  open("../comic.html", "_self");
+  open("comic.html", "_self");
 }
 
 const button = document.querySelectorAll(".li");
 const tab = document.querySelectorAll(".tab");
 
-button.forEach((allLi, i) => {
+button.forEach((listLi, i) => {
   button[i].addEventListener("click", () => {
-    button.forEach((allLi, i) => {
+    button.forEach((listLi, i) => {
       button[i].classList.remove("active");
       tab[i].classList.remove("active");
     });
