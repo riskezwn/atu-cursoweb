@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/comic.css" />
+    <title>Comic | El Show de Midas</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/cabecera.png" alt="" />
+      <div class="fecha">Prueba fecha</div>
+    </header>
+    <main>
+      <div class="container">
+        <ul class="ul">
+          <li class="li active">Viñeta 1</li>
+          <li class="li">Viñeta 2</li>
+          <li class="li">Viñeta 3</li>
+          <li class="li">Contacto</li>
+        </ul>
+        <div class="subcontainer">
+          <div class="tab active"><img src="images/comic1.jpg" alt="" /></div>
+          <div class="tab"><img src="images/comic2.jpg" alt="" /></div>
+          <div class="tab"><img src="images/comic3.jpg" alt="" /></div>
+          <div class="tab" id="contact">
+            <form action="action.php" method="post">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Juan García"
+                class="input"
+                required
+              />
+              <label for="dni">DNI</label>
+              <input
+                type="text"
+                name="dni"
+                id="dni"
+                placeholder="12345678A"
+                class="input"
+                required
+              />
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="tu@email.com"
+                class="input"
+                required
+              />
+              <label for="tlf">Teléfono</label>
+              <input
+                type="number"
+                name="tlf"
+                id="tlf"
+                placeholder="66666666"
+                class="input"
+                required
+              />
+              <label for="suggestions">Sugerencias</label>
+              <textarea name="suggestions" id="suggestions" rows="5"></textarea>
+              <div class="checkbox">
+                <input
+                  type="checkbox"
+                  id="advert"
+                  name="advert"
+                  value="advertTrue"
+                />
+                <label for="advert"> Acepto recibir publicidad de la compañia.</label>
+              </div>
+              <input class="button" type="submit" value="Enviar" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

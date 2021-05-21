@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  background-color: #91bed5;
+  text-align: center;
+}
+header .fecha {
+  padding: 0.5em;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 700;
+  background-color: #242424;
+}
+main {
+  min-height: 900px;
+  margin: 0;
+  padding: 0;
+  /* background-color: #dfdfdf; */
+}
+
+main .container {
+  margin: 0 auto;
+  width: 60%;
+  padding: 1em;
+}
+main .container .ul {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .container .li {
+  cursor: pointer;
+  padding: 1em 2em;
+  color: whitesmoke;
+  font-weight: 500;
+  background-color: #ff6200;
+}
+main .container .li:hover,
+main .container .li.active {
+  background-color: #883b0c;
+}
+main .container .li:first-child {
+  border-radius: 20px 0 0 20px;
+}
+main .container .li:last-child {
+  color: #242424;
+  background-color: #91bed5;
+  border-radius: 0 20px 20px 0;
+}
+main .subcontainer {
+  margin: 2em 0;
+  position: relative;
+}
+main .subcontainer .tab {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.75s ease-in-out;
+}
+main .subcontainer .tab.active {
+  opacity: 100;
+  box-shadow: 5px 5px 10px #7c7c7c;
+}
+main .subcontainer .tab img {
+  width: 100%;
+}
+
+/* TAB FORMULARIO */
+main .subcontainer #contact {
+  color: #242424;
+  margin: 0 auto;
+  padding: 3em;
+}
+form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .subcontainer #contact label{
+  font-weight: 500;
+  margin: 1em;
+}
+main .subcontainer #contact .input,
+#contact textarea {
+  padding: 1em;
+  width: 90%;
+}
+main .subcontainer #contact .checkbox {
+    margin: 1em 0;
+}
+main .subcontainer #contact .button {
+  color: whitesmoke;
+  cursor: pointer;
+  background-color: #ff6200;
+  border: none;
+  padding: 1em;
+  border-radius: 20px;
+  width: 200px;
+  align-self: center;
+}
+mian .subcontainer #contact .button:hover {
+  background-color: #883b0c;
+}
