@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Righteous&display=swap");
+
+body {
+  font-family: "Poppins";
+  height: 100vh;
+  color: #f0f0f0;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-attachment: fixed;
+}
+header {
+  padding: 0 3em;
+  background-color: #2c2c2c;
+  margin: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-family: "Righteous", sans-serif;
+  color: #f0f0f0;
+}
+header .login_button {
+  color: #f0f0f0;
+  text-decoration: none;
+  background-color: #2daa70;
+  padding: 0.85em;
+  border-radius: 10px;
+}
+header .login_button:visited {
+  color: #f0f0f0;
+}
+header .login_button:hover {
+  background-color: #80d0c7;
+}
+
+main {
+  margin: 3em auto 0 auto;
+  width: 85%;
+}
+main .presentation {
+  font-size: 1.5em;
+}
+main .images {
+  padding: 2em;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 100vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+main .images img {
+  width: 31%;
+}
+main .contact {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 3em;
+}
+main .contact .num {
+  margin: 0.3em;
+  font-size: 2em;
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 2px #5a5a5a;
+}
+
+footer {
+  padding: 1em;
+  text-align: center;
+  margin: 0;
+  background-color: #2c2c2c;
+}
