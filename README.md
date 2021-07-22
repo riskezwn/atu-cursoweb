@@ -31,3 +31,8 @@
 with a strip of comics divided into several tabs. Each tab is associated with a button and with JavaScript with each click on the button, it makes the corresponding layer visible and hides the others. It also shows the exact date and time.
 - [Activity 9 - Login](https://riskezwn.github.io/atu-cursoweb/act9_login)
   > This project consists of a landing page, with a login button for employees. On this page, the user is asked for their first and last name, and with JavaScript a key is generated at the moment that consists of a prefix ("dev" or "admin"), their last name, and the length of their last name. Depending on the prefix that you put in the password, the web redirects you to the development panel or the administration panel
+
+### PHP and MySQL
+
+- [Blog App](https://github.com/riskezwn/blog_app)
+ > More info in the repository
